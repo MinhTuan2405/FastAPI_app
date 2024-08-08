@@ -6,12 +6,15 @@ from app.routers import post, user, authentication, votes
 
 # models.Base.metadata.create_all (bind = engine)
 
-origins = [
-    "https://www.google.com",
-    "http://localhost",
-    "http://localhost:8080",
-    "http://127.0.0.1:8000"
-]
+# origins = [
+#     "https://www.google.com",
+#     "http://localhost",
+#     "http://localhost:8080",
+#     "http://127.0.0.1:8000"
+# ]
+
+origins = ["*"]
+
 
 app = FastAPI()
 app.add_middleware(
